@@ -1,0 +1,311 @@
+.island {
+    position: relative;
+    bottom: auto;
+    height: auto;
+    margin-bottom: 2%;
+    padding-top: 4%;
+    padding: 2%;
+    width: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 20px rgb(72, 13, 131);
+    border: 2px solid rgb(131, 64, 197);
+    overflow: hidden;
+    border-radius: 2%;
+}
+h2 {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 7%;
+    color: white;
+    cursor: default;
+}
+h4 {
+    margin-top: 4%;
+    color: white;
+    cursor: default;
+}
+p {
+    text-indent: 2%;
+    font-size: larger;
+    color: white;
+    cursor: default;
+}
+.colorfullglasses {
+    position: relative;
+    float: right;
+    width: 40%;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    animation: floatAnimation 4s linear infinite;
+}
+.solanaglasslogo {
+    position: relative;
+    float: left;
+    width: 30%;
+    margin-right: 4%;
+    animation: rotate 5s linear infinite;
+}
+.decor1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-52%, -52%) rotate(-50deg);
+    width: 70%;
+    z-index: -1;
+}
+.decor2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 60%) rotate(180deg);
+    width: 70%;
+    z-index: -1;
+}
+.buttons {
+    position: relative;
+    margin: 20px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: rgb(91, 13, 207);
+    color: white;
+    font-size: larger;
+}
+.myshop {
+    left: 33%;
+    width: 170px;
+}
+.sourcecode {
+    right: 33%;
+    float: right;
+    width: 200px;
+}
+.sourcecode:hover, .myshop:hover {
+    background-color: rgb(172, 135, 227);
+    color: black;
+    animation: rotate 0.6s linear infinite;
+}
+.sourcecode.block-animation, .myshop.block-animation {
+    animation: none;
+}
+@keyframes rotate {
+    0%, 100% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+}
+@keyframes floatAnimation {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+@media(max-width: 1800px) {
+    .sourcecode {
+        right: 30%;
+    }
+    .myshop {
+        left: 30%;
+    }
+}
+@media(max-width: 1500px) {
+    .sourcecode {
+        right: 27%;
+    }
+    .myshop {
+        left: 27%;
+    }
+    h2 {
+        font-size: 28px;
+    }
+}
+@media(max-width: 1300px) {
+    .sourcecode {
+        right: 24%;
+    }
+    .myshop {
+        left: 24%;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 17px;
+    }
+}
+@media(max-width: 1150px) {
+    .sourcecode {
+        right: 23%;
+        width: 150px;
+        height: 50px;
+        font-size: medium;
+    }
+    .myshop {
+        left: 23%;
+        width: 130px;
+        height: 50px;
+        font-size: medium;
+    }
+    h2 {
+        font-size: 22px;
+    }
+}
+@media(max-width: 1000px) {
+    h2 {
+        font-size: 19px;
+    }
+    h4 {
+        font-size: 15px;
+    }
+    p {
+        font-size: 13px;
+    }
+}
+@media(max-width: 870px) {
+    h2 {
+        font-size: 17px;
+    }
+    .sourcecode {
+        right: 21%;
+        width: 120px;
+        height: 45px;
+        font-size: small;
+    }
+    .myshop {
+        left: 21%;
+        width: 110px;
+        height: 45px;
+        font-size: small;
+    }
+}
+@media(max-width: 800px) {
+    h2 {
+        font-size: 17px;
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+    .colorfullglasses {
+        width: 45%;
+    }
+    .solanaglasslogo {
+        width: 40%;
+    }
+    .sourcecode {
+        margin: 10px;
+        margin-top: 0;
+    }
+    .myshop {
+        margin: 10px;
+        margin-top: 0;
+    }
+}
+@media(max-width: 680px) {
+    h4 {
+        font-size: 13px;
+    }
+    p {
+        font-size: 11px;
+    }
+    .sourcecode {
+        width: 105px;
+        height: 40px;
+        font-size: smaller;
+    }
+    .myshop {
+        width: 100px;
+        height: 40px;
+        font-size: smaller;
+    }
+    .island {
+        width: 82%;
+    }
+}
+@media(max-width: 560px) {
+    h4 {
+        font-size: 15px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .sourcecode {
+        width: 95px;
+        height: 37px;
+        font-size: x-small;
+    }
+    .myshop {
+        width: 90px;
+        height: 37px;
+        font-size: x-small;
+    }
+    .island {
+        width: 86%;
+    }
+}
+@media(max-width: 500px) {
+    h2 {
+        font-size: 16px;
+        margin-left: 9%;
+        margin-right: 9%;
+    }
+    h4 {
+        font-size: 16px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+@media(max-width: 490px) {
+    .sourcecode {
+        right: 17%;
+    }
+    .myshop {
+        left: 17%;
+    }
+}
+@media(max-width: 430px) {
+    .sourcecode {
+        width: 80px;
+        height: 32px;
+        font-size: xx-small;
+    }
+    .myshop {
+        width: 76px;
+        height: 32px;
+        font-size: xx-small;
+    }
+    h2 {
+        font-size: 14px;
+    }
+    h4 {
+        font-size: 15px;
+    }
+    p {
+        font-size: 15px;
+    }
+}
+@media(max-width: 340px) {
+    .sourcecode {
+        width: 72px;
+        height: 29px;
+        font-size: 8px;
+        right: 15%;
+    }
+    .myshop {
+        width: 66px;
+        height: 29px;
+        font-size: 8px;
+        left: 15%;
+    }
+}
+@media(max-width: 290px) {
+    .sourcecode {
+        right: 12%;
+    }
+    .myshop {
+        left: 12%;
+    }
+}

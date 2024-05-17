@@ -1,0 +1,64 @@
+{%extends "base.html"%}
+{%block title%}
+Movie Catalog
+{%endblock title%}
+{%block head%}              
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'moviecatalog.css' %}">
+{%endblock head%}
+{%block content%}
+{% comment %} Gray island. {% endcomment %}
+<div id="island">
+    {% comment %} Movie tape image at the top {% endcomment %}
+    <div class="movietape" id="movietape1">
+        <img src="{%static 'movietape.png'%}">
+    </div>
+    <h1>Movie Catalog</h1>
+    {% comment %} Movie clipper image in the right side {% endcomment %}
+    <div id="movieclipper">
+        <img src="{%static 'movieclapper.png'%}">
+    </div>
+    <p>I am excited to share my comprehensive Movie Catalog website developed using Next.js and TypeScript.  This endeavor embodies my ongoing journey in web development, aiming to craft intuitive and functional applications for users to enjoy.</p>
+    <h4>Key Features:</h4>
+    <ul>
+        <li>
+            <b>Homepage</b>: The homepage serves as the gateway to the vast collection of movies, incorporating lazy loading for seamless browsing and a convenient search bar for effortless navigation.
+        </li>
+        <li>
+            <b>Movie Details Page</b>: Delve deeper into each movie's universe with detailed information, including captivating images, release dates, ratings, comments, and engaging descriptions.
+        </li>
+        <li>
+            <b>User Accounts</b>: Empowering users with personalized experiences, they can register securely, log in, and contribute to the community by adding ratings, comments, saving movies to their watchlist, or creating and managing movies (Editor role required).
+        </li>
+        <li>
+            <b>Admin Panel</b>: Administrators wield control through an intuitive interface, managing user roles effortlessly and ensuring smooth operations across the platform.
+        </li>
+        <li>
+            <b>User Roles</b>: From the Viewer, who can save, rate, and comment on movies, to the Editor, with the power to curate content, and the Admin, orchestrating the platform's functionality, every role adds value to the ecosystem.
+        </li>
+        <li>
+            <b>Movie Categories</b>: Organizing movies into distinct categories enhances discoverability, enriching the browsing experience for every cinephile.
+        </li>
+        <li>
+            <b>Most Popular Movies</b>: Stay updated with the pulse of the community, as the homepage showcases the week's most popular movies based on reviews and ratings.
+        </li>
+        <li>
+            <b>Analytics Panel</b>: Gain insights into movie popularity trends and category preferences through comprehensive analytics, with the flexibility to export data in PDF format for further analysis.
+        </li>
+        <li>
+            <b>Film Slideshow</b>: Immerse yourself in the cinematic realm with captivating slideshows accompanying each movie, enriching the visual experience.
+        </li>
+    </ul>
+    <h4>Technical Implementation:</h4>
+    <p>Utilizing the power of Next.js and TypeScript, this project embodies my commitment to leveraging cutting-edge technologies for seamless user experiences. With a PostgreSQL database housing the data, the project stands as a testament to robust backend architecture and meticulous frontend design.</p>
+    {% comment %} Buttons for my web3shop and for the source code of the web3shop {% endcomment %}
+    <div class="buttons-container">
+        <button class="buttons" onclick='location.href="https://mymoviecatalog.vercel.app/"'>MOVIE CATALOG</button>
+        <button class="buttons" onclick='location.href="https://github.com/davidkakov111/MovieCatalog"'>SOURCE CODE</button>
+    </div>
+    {% comment %} Movie tape image at the bottom {% endcomment %}
+    <div class="movietape" id="movietape2">
+        <img src="{%static 'movietape.png'%}">
+    </div>
+</div>
+{%endblock content%}

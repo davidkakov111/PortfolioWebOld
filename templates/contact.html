@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%load crispy_forms_tags%}
+{%block title%}
+    Contact page
+{%endblock title%}
+{%block head%}
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'contact.css' %}">
+{%endblock head%}
+{%block content%}
+{% comment %} Yellow island. {% endcomment %}
+<div class="island">
+    <p>Write me an email!</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        {% comment %} Contact form. {% endcomment %}
+        <div class="main-content">
+            {{form|crispy}}
+        </div>
+        {% comment %} Submit button. {% endcomment %}
+        <div class="center">
+            <input type="submit" class="btn" value="Send">
+        </div>
+    </form>
+</div>
+{%endblock content%}

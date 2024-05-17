@@ -1,0 +1,119 @@
+.toggle-box {
+    position: absolute;
+    display: none;
+    overflow-y: auto;
+    background-color: rgb(197, 197, 197);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    border-radius: 8px;
+    height: 50px;
+    width: 230px;
+    left: 50%;
+    bottom: 30%;
+    transform: translate(-50%, -50%);
+}
+.island {
+    position: relative;
+    bottom: auto;
+    height: auto;
+    margin-bottom: 2%;
+    padding-top: 4%;
+    padding: 2%;
+    width: 74%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 20px 5px rgb(0, 0, 0);
+    overflow: hidden;
+    border-radius: 2%;
+}
+p {
+    font-size: 20px;
+    font-family: 'Lucida Sans';
+    text-indent: 25px;
+    cursor: default;
+    color: black;
+}
+h1 {
+    padding-bottom: 3%;
+    text-align: center;
+    font-family: 'Lucida Sans';
+    cursor: default;
+    color: black;
+}
+h4 {
+    color: black;
+}
+.img_me {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 39%;
+    margin: 2%;
+    border-radius: 50%;
+}
+.contain {
+    position: relative;
+    height: 120px;
+    width: 150px;
+    margin: 0 auto;
+}
+.box1 {
+    position: absolute;
+    width: 120px;
+    z-index: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.click_img {
+    position: absolute;
+    bottom: 27%;
+    width: 65px;
+    left: 50%;
+    transform: translateX(22%);
+    z-index: 1;
+}
+@media (min-width: 1800px) {
+    .img_me {
+        transform: translateY(-5%);
+    }
+}
+@media (min-width: 1790px) {
+    .img_me {
+        width: 480px;
+    }
+}
+@media (max-width: 767px) {
+    .island {
+        width: 85%;
+    }
+}
+@media (max-width: 650px) {
+    p {
+        font-size: 18px;
+        text-indent: 15px;
+    }
+}
+@media (max-width: 500px) {
+    p {
+        font-size: 15px;
+    }
+    .img_me {
+        width: 50%;
+    }
+}
+@media (max-width: 400px) {
+    p {
+        font-size: 13px;
+        text-indent: 10px;
+    }
+    .img_me {
+        width: 80%;
+        float: none;
+        margin: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 5%;
+    }
+}

@@ -1,0 +1,80 @@
+{%extends 'base.html'%}
+{% comment %} Title {% endcomment %}
+{%block title%}web3shop{%endblock title%}
+{%block head%}
+{% comment %} Css file {% endcomment %}
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'web3shop.css' %}">
+{%endblock head%}
+{% block content %}
+{% comment %} Black island {% endcomment %}
+<div class="island">
+    {% comment %} Texts {% endcomment %}
+    <h2>Solana Mystery Box Shop: Revolutionizing Crypto Payments</h2>
+    <h4>Introduction:</h4>
+    {% comment %} Images {% endcomment %}
+    <div class="colorfullglasses">
+        <img position="relative" width="100%" height="100%" src="{%static 'glass.png'%}">
+    </div>
+    <div class="decor1">
+        <img position="absolute" width="100%" height="100%" src="{%static 'decor.jpg'%}">
+    </div>
+    {% comment %} Texts {% endcomment %}
+    <p>In the ever-evolving landscape of cryptocurrencies, one project stands out as a game-changer in how we approach online payments. The <b>Solana Mystery Box Shop</b>, a mainly Django-based platform, has ushered in a new era in crypto transactions. Leveraging Django as the backbone, and strategically implementing Next.js for NFT minting, the shop overcomes Python limitations while enhancing its uniqueness. By harnessing the capabilities of the <a href="https://github.com/michaelhly/solana-py">Solana Python SDK</a> and others, such as the <a href="https://solana-labs.github.io/solana-web3.js/">Web3.js</a>.</p>
+    <h4>The Vision and Mission:</h4>
+    <p>At its core, the Solana Mystery Box Shop was conceived to simplify the crypto payment process. Its mission is to provide a seamless, secure, and instant shopping experience without the need for user registration, money deposits, or complex wallet connections. This approach also eliminates phishing risks by completely severing communication from the user's wallet to the webshop, with no data exchange from the user. In an era where crypto is becoming increasingly mainstream, the project's vision is to make it accessible to everyone.</p>
+    <h4>Mystery Boxes:</h4>
+    <p>Discover a world of possibilities with the mystery boxes, each offering a unique blend of NFTs tokens and Solana.</p>
+    <ul>
+        <li><p><b>NFT Mystery Boxes</b>: Immerse yourself in the world of digital art and collectibles. Explore random NFTs in various themes, injecting excitement into every purchase.</p></li>
+        <li><p><b>Solana Mystery Boxes</b>: Multiply your money and stand a chance to win 1 Whole Solana from a single purchase. Embark on a thrilling adventure with the promise of substantial gains.</p></li>
+        <li><p><b>Token Mystery Boxes</b>: Unlock the potential to win up to a Trillion tokens with a single purchase. Explore a treasure trove of tokens, expanding your crypto portfolio and financial horizons.</p></li>
+    </ul>
+    <h4>My Role in the Project:</h4>
+    <p>As the sole owner and developer of the Solana Mystery Box Shop, I was responsible for every aspect of the project, from its inception to design, development, and implementation. This encompassed the creation of the QR code payment system, instant reward distribution, and all other critical components.</p>
+    <h4>Overcoming Challenges:</h4>
+    <p>Like any ambitious project, the Solana Mystery Box Shop presented its own set of challenges. From integrating Solana's capabilities seamlessly to ensuring a seamless user experience. These challenges were not roadblocks but opportunities for innovation.</p>
+    {% comment %} Image {% endcomment %}
+    <div class="solanaglasslogo">
+        <img position="relative" width="100%" height="100%" src="{%static 'solanaglasslogo.png'%}">
+    </div>
+    {% comment %} Texts {% endcomment %}
+    <h4>Innovative Features:</h4>
+    <p>The Solana Mystery Box Shop introduces several groundbreaking features that have redefined crypto shopping:</p>
+    <ul>
+        <li><p><b>QR Code Payments</b>: Users can effortlessly initiate transactions by scanning QR codes, making the process swift and secure.</p></li>
+        <li><p><b>No-Registration Shopping</b>: The platform eliminates the need for users to create accounts, making it accessible to a wider audience.</p></li>
+        <li><p><b>Instant Rewards</b>: The project ensures immediate gratification for users with rapid reward distribution.</p></li>
+    </ul>
+    <h4>Changing the Crypto Landscape:</h4>
+    <p>The significance of this project extends beyond its immediate impact. The Solana Mystery Box Shop has fundamentally altered the way people perceive and engage with cryptocurrency payments. It has made the process more accessible, secure, and hassle-free, setting a new standard for crypto transactions.</p>
+    <h4>Conclusion:</h4>
+    <p>In conclusion, the Solana Mystery Box Shop is a project that showcases the power of technology to simplify and revolutionize. It's a reminder that innovation knows no bounds in the digital age.</p>
+    <p>I invite you to delve deeper into the <b>Solana Mystery Box Shop</b> by exploring it. Get a firsthand look at its innovative features and functionalities. Additionally, if you're interested in the inner workings of the project, you can access the source code on GitHub.</p>
+    <br>
+    {% comment %} Buttons for my web3shop and for the source code of the web3shop {% endcomment %}
+    <button id="blockButton1" class="myshop buttons" onclick='location.href="https://solanamysterybox.vercel.app/"'>MY SHOP</button>
+    <button id="blockButton2" class="sourcecode buttons" onclick='location.href="https://github.com/davidkakov111/SolanaMysteryBoxShop"'>SOURCE CODE</button>
+    {% comment %} Image {% endcomment %}
+    <div class="decor2">
+        <img position="absolute" width="100%" height="100%" src="{%static 'decor.jpg'%}">
+    </div>
+</div>
+<script>
+    {% comment %} Java Script for the buttons {% endcomment %}
+    document.getElementById("blockButton2").addEventListener("click", function() {
+        var sourceCodeElement = document.querySelector(".sourcecode");
+        sourceCodeElement.classList.toggle("block-animation");
+        setTimeout(function() {
+            sourceCodeElement.classList.remove("block-animation");
+        }, 2500);
+    });
+    document.getElementById("blockButton1").addEventListener("click", function() {
+        var sourceCodeElement = document.querySelector(".myshop");
+        sourceCodeElement.classList.toggle("block-animation");
+        setTimeout(function() {
+            sourceCodeElement.classList.remove("block-animation");
+        }, 2500);
+    });
+</script>
+{% endblock content %}

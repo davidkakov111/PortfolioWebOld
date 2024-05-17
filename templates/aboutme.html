@@ -1,0 +1,66 @@
+{%extends 'base.html'%}
+{%block title%}
+    About me
+{%endblock title%}
+{%block head%}
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'aboutme.css' %}">
+{%endblock head%}
+{%block content%}
+<div class="island">
+    <h1>Who I Am?</h1>
+    {% comment %} Selfie. {% endcomment %}
+    <div class="img_me">
+        <img position="relative" width="100%" height"100%" src="{% static 'me.png'%}" alt="Me">
+    </div>
+    {% comment %} Informations about me {% endcomment %}
+    <h4>👋 Let Me Introduce Myself</h4>
+    <p>I'm Kovács Dávid, a dedicated programmer with a fervent passion for the dynamic world of software development. With a focus on backend proficiency, particularly in Python and the Django framework, as well as experience in TypeScript, I continuously explore the realms of innovation and problem-solving in this ever-evolving field.</p>
+    <h4>🚀 Key Highlights</h4>
+    <ul>
+        <li><p><b>Backend Expertise</b>: Python serves as my cornerstone, empowering me to navigate the complexities of backend development effortlessly. My portfolio exemplifies my commitment to leveraging Python's capabilities, especially within the Django ecosystem.</p></li>
+        <li><p><b>Frontend Versatility</b>: While my recent endeavors have leaned towards backend prowess, my proficiency in frontend technologies underscores my versatility. Equally adept in frontend finesse, I'm poised to contribute effectively to projects that demand a fusion of both domains.</p></li>
+        <li><p><b>Embracing Emerging Technologies</b>: Venturing into the intricate landscape of web3 technologies, I seek to integrate my frontend and backend expertise to craft cutting-edge solutions.</p></li>
+    </ul>
+    <h4>💡 Why Choose Me?</h4>
+    <p>My journey reflects a relentless pursuit of excellence and a knack for tackling real-world challenges head-on. From developing the Solana Mystery Box Shop to <span id="toggle-button" style="text-decoration: underline; cursor: pointer; color: rgb(10, 160, 197);">debugging SDKs</span>, I thrive on delivering impactful solutions that drive innovation.</p>
+    <h4>🔍 Let's Connect</h4>
+    <p>Don't hesitate to <a href="{%url 'contact'%}">reach out</a>! Whether you're seeking collaboration opportunities or simply want to explore synergies, I'm here to elevate your projects to new heights.</p>
+    {% comment %} Div with bug report links. {% endcomment %}
+    <div class="toggle-box" id="content">
+        <ul>
+            <li><a href="https://github.com/itayb1/solana-pay-py/issues/5">Solana Pay Python SDK.</a></li>
+            <li><a href="https://github.com/metaplex-foundation/python-api/issues/47">Metaplex Python Api.</a></li>
+        </ul>
+    </div>
+    <br>
+    {% comment %} My GitHub profile. {% endcomment %}
+    <div class="contain">
+        <div>
+            <a href="https://github.com/davidkakov111">
+                <img class="box1" src="{%static 'Github.png'%}" alt="Github logo">
+            </a>
+        </div>
+        <div class="click_img">
+            <img src="{%static 'click.png'%}" alt="Click here!" width="100%">
+        </div>
+    <div>
+</div>
+<script>
+    {% comment %} Java Script for the tooggle button. {% endcomment %}
+    const toggleButton = document.getElementById('toggle-button');
+    const content = document.getElementById('content');
+    let hideTimeout;
+    toggleButton.addEventListener('click', function() {
+        content.style.display = 'block';
+    });
+    toggleButton.addEventListener('mouseenter', function() {
+        content.style.display = 'block';
+    });
+    document.addEventListener('click', function(event) {
+        if (event.target !== toggleButton) {
+            content.style.display = 'none';
+        }
+    });
+</script>
+{%endblock content%}

@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%block title%}
+    404
+{%endblock title%}
+{% comment %} Block for CSS. {% endcomment %}
+{%block style%}
+#fullsc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -99;
+    background-color: black;
+}
+#vid404 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+}
+{%endblock style%}
+{%block content%}
+{%load static%}
+<div id="fullsc"></div>
+<div id="vid404">
+    <video src="../static/404.mp4" position="absolute" width="100%" height="100%" loop muted autoplay poster="../static/404.jpg"></video>
+</div>
+{%endblock content%}

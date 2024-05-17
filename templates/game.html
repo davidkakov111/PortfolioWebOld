@@ -1,0 +1,141 @@
+{%extends 'base.html'%}
+{%block title%}
+    Game
+{%endblock title%}
+{%block head%}
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'game.css' %}">
+{%endblock head%}
+{%block content%}
+{% comment %} Yellow island. {% endcomment %}
+<div class="island">
+    {% comment %} Papagal images {% endcomment %}
+    <div id="greenpapagal">
+        <img position="relative" width="100%" height="100%" src="{% static 'greenpapagal.png'%}">
+    </div>
+    <div id="bluepapagal">
+        <img position="relative" width="100%" height="100%" src="{% static 'bluepapagal.png'%}">
+    </div>
+    {% comment %} Text. {% endcomment %}
+    <h1>Animal Invasion</h1>
+    <p>I'm excited to introduce you to Animal Invasion, a 2D game crafted with Python using the Arcade game developer module. This project represents the first significant milestone in my journey as a developer.</p>
+    <h4>Game Overview:</h4>
+    <p>In Animal Invasion, you assume the role of a determined businessman on a quest to collect bitcoins amidst a myriad of challenges. Navigate through treacherous terrain guarded by various creatures, each posing a threat upon contact. Dodge these obstacles with finesse to safeguard your progress and maximize your chances of success. Remember, every bitcoin collected brings you closer to victory – gather all 20 to earn my heartfelt gratitude!</p>
+    <br>
+    {% comment %} Horizontal overflow main container. {% endcomment %}
+    <div class="ContOut">
+        {% comment %} Container of the image containers. {% endcomment %}
+        <div class="image_container_container">
+            {% comment %} Image container. {% endcomment %}
+            <div class="image_container img_cont_0">
+                {% comment %} Images. {% endcomment %}
+                <img src="{% static 'game1.jpg' %}">
+                <img src="{% static 'game2.jpg' %}">
+                <img src="{% static 'game3.jpg' %}">
+                <img src="{% static 'game4.jpg' %}">
+                <img src="{% static 'game5.jpg' %}">
+                <img src="{% static 'game6.jpg' %}">
+                <img src="{% static 'game7.jpg' %}">
+                <img src="{% static 'game8.jpg' %}">
+                <img src="{% static 'game9.jpg' %}">
+            </div>
+            {% comment %} Image container. {% endcomment %}
+            <div class="image_container img_cont_1">
+                {% comment %} Images. {% endcomment %}
+                <img src="{% static 'game1.jpg' %}">
+                <img src="{% static 'game2.jpg' %}">
+                <img src="{% static 'game3.jpg' %}">
+                <img src="{% static 'game4.jpg' %}">
+                <img src="{% static 'game5.jpg' %}">
+                <img src="{% static 'game6.jpg' %}">
+                <img src="{% static 'game7.jpg' %}">
+                <img src="{% static 'game8.jpg' %}">
+                <img src="{% static 'game9.jpg' %}">
+            </div>
+            {% comment %} Image container. {% endcomment %}
+            <div class="image_container img_cont_2">
+                {% comment %} Images. {% endcomment %}
+                <img src="{% static 'game1.jpg' %}">
+                <img src="{% static 'game2.jpg' %}">
+                <img src="{% static 'game3.jpg' %}">
+                <img src="{% static 'game4.jpg' %}">
+                <img src="{% static 'game5.jpg' %}">
+                <img src="{% static 'game6.jpg' %}">
+                <img src="{% static 'game7.jpg' %}">
+                <img src="{% static 'game8.jpg' %}">
+                <img src="{% static 'game9.jpg' %}">
+            </div>
+        </div>
+    </div>
+    <br>
+    <h4>Risk Assessment:</h4>
+    {% comment %} Text. {% endcomment %}
+    <p>I understand the importance of ensuring a safe gaming experience. While the game's .exe extension may trigger caution from some antivirus engines, rest assured, I've meticulously vetted Animal Invasion using VirusTotal. Over 85% of antivirus engines deemed it safe, with the remaining flagging it due to the file extension's inherent risk perception. For transparency, you can review the detailed scan <a href="https://www.virustotal.com/gui/file/3410b0575dbd261af7180c6aae27fb2e4765a5110a3fa57aa90358cb5a4f74aa">results</a> and access the game's open-source code for added peace of mind.</p>
+    <h4>Guide to <b>launch</b> the Game:</h4>
+    <ol>
+        {% comment %} Dropdown content. {% endcomment %}
+        <li class="fs">After the download is complete, <abbr title="Right-click on the folder, then click on the option 'Extract All' button. After that, choose the destination where you want to extract the files.">extract the files</abbr>.</li>
+        <li class="fs">Afterward, open the <abbr title="The folder name is ANIMAL_INVASION"> extracted folder</abbr>.</li>
+        <li class="fs">Open the folder named 'dist'.</li>
+        <li class="fs">Open the next <abbr title="The folder name is ANIMAL_INVASION"> folder </abbr> as well.</li>
+        <li class="fs">To start the game, open the ANIMAL_INVASION.exe file.</li>
+        <li class="fs">I wish you the best of luck with your gameplay!</li>
+    </ol>
+    <br>
+    <h4>Get Started:</h4>
+    {% comment %} Text. {% endcomment %}
+    <p>Are you ready to conquer Animal Invasion? Click the button below to download and embark on an unforgettable gaming experience. Let the adventure begin!</p>
+    <br>
+    <div class="buttons-container">
+        {% if user.is_authenticated %}
+            {% comment %} Download button for authenticated users. {% endcomment %}
+            <button class="buttons" onclick="downloadGame()">DOWNLOAD</button>
+        {%else%}
+            <button class="buttons" onclick='location.href="{%url "login"%}"'>DOWNLOAD</button>
+        {% endif %}
+        <button class="buttons" onclick='location.href="https://github.com/davidkakov111/My_Game.git"'>SOURCE CODE</button>
+    </div>
+    {% comment %} Main character and solider images {% endcomment %}
+    <div id="maincharacter">
+        <img position="relative" width="100%" height="100%" src="{% static 'gamemaincharacter.png'%}">
+    </div>
+    <div id="solidercharacter">
+        <img position="relative" width="100%" height="100%" src="{% static 'solidercharacter.png'%}">
+    </div>
+    <script>
+        {% comment %} Download the game from GitHub. {% endcomment %}
+        function downloadGame() {
+            var link = document.createElement('a');
+            link.href = 'https://github.com/davidkakov111/My_Game/raw/zip/ANIMAL_INVASION.zip';
+            link.download = 'ANIMAL_INVASION.zip';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        {% comment %} Set the display of the .img_cont_0 to "none" after the animation is done. {% endcomment %}
+        document.addEventListener("DOMContentLoaded", function () {
+            const elementToAnimate = document.querySelector(".img_cont_0");
+            elementToAnimate.addEventListener("animationend", function () {
+              elementToAnimate.style.display = "none";
+            });
+          });
+        {% comment %} Img animation {% endcomment %}
+        document.addEventListener("DOMContentLoaded", function () {
+            const element = document.querySelector(".ContOut");
+            const elementToAnimate0 = document.querySelector(".img_cont_0");
+            const elementToAnimate1 = document.querySelector(".img_cont_1");
+            const elementToAnimate2 = document.querySelector(".img_cont_2");
+            element.addEventListener("mouseenter", function () {
+              elementToAnimate0.style.animationPlayState = "paused";
+              elementToAnimate1.style.animationPlayState = "paused";
+              elementToAnimate2.style.animationPlayState = "paused";
+            });
+            element.addEventListener("mouseleave", function () {
+              elementToAnimate0.style.animationPlayState = "running";
+              elementToAnimate1.style.animationPlayState = "running";
+              elementToAnimate2.style.animationPlayState = "running";
+            });
+          });
+    </script>
+</div>
+{%endblock content%}

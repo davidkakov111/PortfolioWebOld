@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    {% comment %} CSS {% endcomment %}
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 3%;
+        }
+        p {
+            text-align: center;
+            font-size: 35px;
+        }
+        #email {
+            width: 500px;
+            display: block;
+            margin: 0 auto;
+        }
+        body {
+            background-color: rgb(0, 255, 100, 0.4);
+        }
+        @media (max-width: 650px) {
+            #email {
+                width: 400px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 600px) {
+            #email {
+                width: 400px;
+            }
+        }
+        @media (max-width: 450px) {
+            #email {
+                width: 300px;
+            }
+        }
+        @media (max-width: 350px) {
+            #email {
+                width: 200px;
+            }
+            p {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% comment %} Text {% endcomment %}
+    <h1>Dear {{name}}, please check your inbox for messages, and if not found, check your spam folder.</h1>
+    <p>Back to <a href="{%url 'homepage'%}">homepage</a>!</p>
+    {%load static%}
+    {% comment %} Mail img. {% endcomment %}
+    <div>
+        <img id="email" src="{% static 'email.png' %}">
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -100;
+}
+.fullscreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+}
+a:visited {
+    color: rgb(10, 10, 197);
+}
+.nai:hover {
+    background-color: rgba(0, 138, 180, 0.877);
+    box-shadow: 0px 0px 10px 5px rgba(0, 138, 180, 1);
+    border-radius: 80px;
+}
+.dropdown-menu {
+    background: linear-gradient(to bottom right, rgb(1, 2, 31), rgb(0, 0, 43), rgb(0, 0, 78), rgb(0, 0, 112));
+    border-radius: 10px;
+    color: white;
+}
+.dropdown-item:hover {
+    background: linear-gradient(to top left, rgb(3, 5, 85), rgb(2, 2, 143), rgb(0, 0, 201), rgb(0, 0, 255));
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.logout {
+    position: relative;
+    width: 35px;
+    height: 35px;
+} 
+.navbar {
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0);
+}
+.navbar-nav {
+    margin-left: -20px;
+}
+.lgo, .lgo2 {
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.nav-item{
+    border-radius: 80px;
+    position: relative;
+    margin: auto;
+}
+.signlog-box {
+    width: 80px;
+    height: 35px;
+    margin: 8px;
+}
+.signlog {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 220, 250, 1);
+    border-radius: 10px;
+    background-color: rgba(1, 123, 199, 0.8);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-weight: 500;
+    text-align: center;
+}
+.signlog:hover {
+    background-color: rgba(1, 123, 199, 1);
+    box-shadow: 0px 0px 7px 5px rgba(0, 127, 204, 1);
+    color: rgba(0, 220, 250, 1);
+}
+.signlog:active {
+    transform: scale(0.93, 0.93);
+}
+#logoutimg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#logoutimg:active {
+    width: 90%;
+}
+.btns {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 1px;
+}
+.dropdown-item {
+    color: white;
+}
+@media (min-width: 767px) {
+    .light:hover {
+      background-color: rgba(0, 138, 180, 0.877);
+      box-shadow: 0px 0px 10px 5px rgba(0, 138, 180, 1);
+      border-radius: 80px;
+    }
+    .btns {
+        position: absolute;
+        right: 2%;
+    }
+}
+@media (max-width: 767px) {
+    .btns {
+      right: 2%;
+    }
+    .logout {
+      margin-top: 9%;
+    }
+    .lgo {
+        left: 40%;
+    }
+}
+@media (max-width: 550px) {
+    .lgo {
+        left: 35%;
+    }
+}
+@media (max-width: 370px) {
+    .lgo {
+        left: 30%;
+    }
+}
+@media (max-width: 330px) {
+    .lgo {
+      display: none;
+    }
+}

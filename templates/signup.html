@@ -1,0 +1,53 @@
+{%extends "base.html"%}
+{%block title%}
+Sign Up
+{%endblock title%}
+{%block head%}              
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'signup.css' %}">
+{%endblock head%}
+{%block content%}
+{% comment %} Yellow island. {% endcomment %}
+<div class="island">
+    {% comment %} Content {% endcomment %}
+    <div class="content">
+        <h1><b>Sign Up</b></h1>
+        <form method="post">
+            {% csrf_token %}
+            <br>
+            {% comment %} Sign Up inputs and labels. {% endcomment %}
+            <label for="email">Email address</label>
+            <input type="email" placeholder="Enter your email" id="email" name="email" required><br>
+            <label for="password">Set password</label>
+            <input type="password" placeholder="Enter password" id="password" name="password" required><br>
+            <label for="pasword">Confirm password</label>
+            <input type="password" placeholder="Password again" id="pasword" name="pasword" required>
+            {% comment %} Sign Up button. {% endcomment %}
+            <input class="btn mb-4 mt-4" type="submit" id = "submit" name="submit" value="Sign Up →">
+        </form>
+    </div>
+    {% comment %} Separator text. {% endcomment %}
+    <div class="boxx">
+        {% comment %} Left line. {% endcomment %}
+        <div class="hrleft">
+            <hr>
+        </div>
+        {% comment %} Mid text. {% endcomment %}
+        <div class="or">
+            <p>Or Sign UP Using</p>
+        </div>
+        {% comment %} Right line. {% endcomment %}
+        <div class="hrright">
+            <hr>
+        </div>
+    </div>
+    {% comment %} GitHub login option. {% endcomment %}
+    <div class="containergit container">
+        <a href="{% url 'social:begin' 'github' %}"><img class="container-content" src="{% static 'Github.png'%}" alt="GitHUb"></a>
+    </div>
+    {% comment %} Google login option. {% endcomment %}
+    <div class="containergoogle container">
+        <a href="{% url 'social:begin' 'google-oauth2' %}"><img class="container-content" src="{% static 'googlelogo.png'%}" alt="Google"></a>
+    </div>
+</div>
+{%endblock content%}
