@@ -7,10 +7,6 @@ from .forms import ContactForm
 from django.core.mail import EmailMessage
 from django.contrib.auth import views as auth_views
 
-#Home view
-def homepage(request):
-    return render(request, 'index.html')
-
 #Game view
 def game(request):
     return render(request, 'game.html')
@@ -52,10 +48,10 @@ def signup(request):
             #Automatic login.
             UseR = authenticate(request, username=email, password=password)
             login(request, UseR)
-            return render(request, "index.html")
+            return render(request, "aboutme.html")
         except:
             #Formal error handing.
-            return render(request, 'index.html')
+            return render(request, 'aboutme.html')
 
 #Log In view
 def Login(request):
@@ -70,19 +66,19 @@ def Login(request):
             if user is not None:
                 #User login.
                 login(request, user)
-                return render(request, 'index.html')
+                return render(request, 'aboutme.html')
             else:
                 return render(request, "response.html", {"data":"unsuccessfullogin"})
         except:
             #Formal error handing.
-            return render(request, 'index.html')
+            return render(request, 'aboutme.html')
 
 #Log Out view
 @login_required
 def Logout(request):
     logout(request)
     auth_views.LogoutView.as_view()
-    return render(request, 'index.html')
+    return render(request, 'aboutme.html')
 
 #Contact view
 @login_required
@@ -128,9 +124,9 @@ def contact(request):
                 return render(request, 'contact_response.html', {"name":name})
             else:
                 # Formal error handing.
-                return render(request, "index.html")
+                return render(request, "aboutme.html")
         except:
             # Formal error handing.
-            return render(request, "index.html")
+            return render(request, "aboutme.html")
     else:
         return render(request, "contact.html", {'form':form})

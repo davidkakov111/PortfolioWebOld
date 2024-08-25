@@ -42,9 +42,6 @@
             <a class="nav-link active" id="Home" aria-current="page" href="#"></a>
           </li>
           <li class="nav-item nai">
-            <a class="nav-link active" aria-current="page" href="{%url "aboutme"%}">About me</a>
-          </li>
-          <li class="nav-item nai">
             <a class="nav-link active" aria-current="page" href="{%url "web3shop"%}">Web3 Shop</a>
           </li>
           {% comment %} More content, dropdown. {% endcomment %}
@@ -66,10 +63,10 @@
       </div>
       {% comment %} Logo for unauthenticated users. {% endcomment %}
       {% if not user.is_authenticated %}
-        <a class="navbar-brand lgo" href="{%url 'homepage'%}"><img src="{% static 'logo.png'%}" alt="My image" width="60px"></a>
+        <a class="navbar-brand lgo" href="{%url 'aboutme'%}"><img src="{% static 'logo.png'%}" alt="My image" width="60px"></a>
       {%else%}
       {% comment %} Logo for authenticated users. {% endcomment %}
-        <a class="navbar-brand lgo2" href="{%url 'homepage'%}"><img src="{% static 'logo.png'%}" alt="My image" width="60px"></a>
+        <a class="navbar-brand lgo2" href="{%url 'aboutme'%}"><img src="{% static 'logo.png'%}" alt="My image" width="60px"></a>
       {%endif%}
       {% comment %} Navbar right content. {% endcomment %}
       <ul class="navbar-nav ms-auto btns">

@@ -24,9 +24,8 @@ from django.conf.urls.static import static
 # Url patterns
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homepage,  name="homepage"),
+    path('', views.aboutme, name="aboutme"),
     path('game/', views.game, name='game'),
-    path('aboutme/', views.aboutme, name="aboutme"),
     path('Web3shop/', views.web3shop, name="web3shop"),
     path('MovieCatalog/', views.MovieCatalog, name="moviecatalog"),
     path('signup/', views.signup, name="signup"),
