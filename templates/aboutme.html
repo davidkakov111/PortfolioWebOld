@@ -14,26 +14,21 @@
         <img position="relative" width="100%" height"100%" src="{% static 'me.png'%}" alt="Me">
     </div>
     {% comment %} Informations about me {% endcomment %}
-    <h4>👋 Let Me Introduce Myself</h4>
-    <p>I'm David Kovacs, experienced full-stack JavaScript/TypeScript developer with a passion for building scalable, high-performance applications. With experience in crafting both backend and frontend solutions, I specialize in delivering robust and maintainable code that powers modern web experiences.</p>
-    <h4>🚀 Key Highlights</h4>
+    <h4>👋 About me</h4>
+    <p>I’m David Kovacs, an experienced Full-Stack Developer with expertise in JavaScript, TypeScript, Node.js, Angular, React, MySQL, PostgreSQL and a lot more. Over the years, I’ve delivered reliable, scalable, and high-performance applications, including eCommerce, Web3, and community-driven platforms.</p>
+    <h4>🚀 Key Experiences & Projects</h4>
     <ul>
-        <li><p><b>Full-Stack Expertise</b>: Proficient in JavaScript and TypeScript, I excel in developing full-stack solutions using multiple frameworks, like Node.js for backend services and Angular/React for dynamic and responsive frontends. My approach ensures seamless integration between the server and client, creating a cohesive user experience.</p></li>
-        <li><p><b>Backend Proficiency</b>: Leveraging Node.js, I build efficient, scalable, and secure APIs that form the backbone of complex applications. My experience extends to database management, RESTful services, and server-side logic, ensuring that every project is built with performance in mind.</p></li>
-        <li><p><b>Frontend Mastery</b>: Whether it’s Angular or React, I bring your user interfaces to life with clean, maintainable code and a deep understanding of modern frontend architectures. From component-based design to state management, I ensure that the frontend is as robust as the backend.</p></li>
-        <li><p><b>Continuous Learning & Innovation</b>: I stay at the forefront of emerging technologies and industry trends, continuously enhancing my skill set to bring the latest and greatest to every project. Whether it's exploring the newest JavaScript framework or optimizing a backend process, I'm driven by a love for learning and innovation.</p></li>
+        <li><p><b>Full-Stack Developer</b> (May 2024 - Present): Worked on multiple high-traffic eCommerce platforms, automating key processes; contributed to the development of a CMS platform that enables users to build custom webshops; and developed the Székely Localization Search Engine, optimizing database management and search features for a local community, among other projects.</p></li>
+        <li><p><b>Freelance Backend Developer</b> (June 2024 - September 2024): Developed scalable backend services using Node.js and NestJS, creating robust APIs and integrating location-based features and push notifications to enhance user engagement. Additionally, I set up CI/CD pipelines with Docker to ensure seamless deployment and system stability, along with other key functionalities.</p></li>
+        <li><p><b>Web3 & Blockchain Projects</b> (Okt 2023 - Present): Worked on projects like ChainPortal, a platform for minting and bridging Web3 assets across blockchains, and Solana Mystery Box Shop, an automated webshop generating passive income by selling randomized Web3 assets. I also built a Movie Catalog App using React and Next.js for browsing, rating, and saving movies, with an admin panel for content management.</p></li>
     </ul>
     <h4>💡 Why Choose Me?</h4>
-    <p>My experience and skill set make me an adaptive developer capable of tackling complex challenges across the full stack. I’m dedicated to delivering high-quality code, on time, and within scope, while also ensuring that the solutions I create are scalable, secure, and future-proof. Whether you're looking to build a new product from the ground up or need an expert to enhance your existing application, I'm here to help.</p>
+    <p>I deliver scalable, efficient, and secure solutions that save time and money for clients. My expertise spans custom CMS platforms, eCommerce solutions, and Web3 applications, with a focus on driving real business outcomes.</p>
+    <p style="text-indent: 60px;"><b>Proven Client Impact</b>: I've built solutions that automate processes, like enable users to place orders seamlessly, saving clients both time and money.</p>
+    <p style="text-indent: 60px;"><b>Results-Oriented</b>: I prioritize performance, security, and efficiency, delivering solutions that drive business growth.</p>
+    <p style="text-indent: 60px;"><b>Real-World Results</b>: My work has consistently helped clients streamline operations and increase productivity, driving measurable improvements in their business.</p>
     <h4>🔍 Let's Connect</h4>
     <p>Don't hesitate to <a href="{%url 'contact'%}">reach out</a>! Whether you're seeking a developer to bring your vision to life or need someone to step in and optimize your existing setup, feel free to reach out.</p>
-    {% comment %} Div with bug report links. {% endcomment %}
-    <div class="toggle-box" id="content">
-        <ul>
-            <li><a href="https://github.com/itayb1/solana-pay-py/issues/5">Solana Pay Python SDK.</a></li>
-            <li><a href="https://github.com/metaplex-foundation/python-api/issues/47">Metaplex Python Api.</a></li>
-        </ul>
-    </div>
     <br>
     {% comment %} My GitHub profile. {% endcomment %}
     <div class="contain">
@@ -47,21 +42,4 @@
         </div>
     <div>
 </div>
-<script>
-    {% comment %} Java Script for the tooggle button. {% endcomment %}
-    const toggleButton = document.getElementById('toggle-button');
-    const content = document.getElementById('content');
-    let hideTimeout;
-    toggleButton.addEventListener('click', function() {
-        content.style.display = 'block';
-    });
-    toggleButton.addEventListener('mouseenter', function() {
-        content.style.display = 'block';
-    });
-    document.addEventListener('click', function(event) {
-        if (event.target !== toggleButton) {
-            content.style.display = 'none';
-        }
-    });
-</script>
 {%endblock content%}
