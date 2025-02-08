@@ -42,21 +42,24 @@
             <a class="nav-link active" id="Home" aria-current="page" href="#"></a>
           </li>
           <li class="nav-item nai">
-            <a class="nav-link active" aria-current="page" href="{%url "web3shop"%}">Web3 Shop</a>
+            <a class="nav-link active" aria-current="page" href="{%url 'aboutme'%}">About Me</a>
+          </li>
+          <li class="nav-item nai">
+            {% comment %} Login required. {% endcomment %}
+            {% if user.is_authenticated %}
+              <a class="nav-link active" aria-current="page" href="{%url 'contact'%}">Contact</a>
+            {%else%}
+            {% comment %} Withouth login. {% endcomment %}
+              <a class="nav-link active" aria-current="page" href="{%url 'login'%}">Contact</a>
+            {%endif%}
           </li>
           {% comment %} More content, dropdown. {% endcomment %}
           <li class="nav-item dropdown light">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownmenu" role="button" data-bs-toggle="dropdown" aria-expanded="False">More</a>
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownmenu" role="button" data-bs-toggle="dropdown" aria-expanded="False">Portfolio</a>
             <div class="dropdown-menu" aria-labelledby="dropdownmenu">
+              <a class="dropdown-item" onclick="location.href='{%url 'web3shop'%}'">Web3 Shop</a>
               <a class="dropdown-item" onclick="location.href='{%url 'moviecatalog'%}'">Movie Catalog</a>
               <a class="dropdown-item" onclick="location.href='{%url 'game'%}'">Game</a>
-              {% comment %} Login required. {% endcomment %}
-              {% if user.is_authenticated %}
-                <a class="dropdown-item" onclick="location.href='{%url "contact"%}'">Contact</a>
-              {%else%}
-              {% comment %} Withouth login. {% endcomment %}
-                <a class="dropdown-item" onclick="location.href='{%url "login"%}'">Contact</a>
-              {%endif%}
             </div>
           </li>
         </ul> 
