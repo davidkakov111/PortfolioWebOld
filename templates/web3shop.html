@@ -1,6 +1,6 @@
 {%extends 'base.html'%}
 {% comment %} Title {% endcomment %}
-{%block title%}web3shop{%endblock title%}
+{%block title%}Web3 Shop{%endblock title%}
 {%block head%}
 {% comment %} Css file {% endcomment %}
 {%load static%}
@@ -20,7 +20,7 @@
         <img position="absolute" width="100%" height="100%" src="{%static 'decor.jpg'%}">
     </div>
     {% comment %} Texts {% endcomment %}
-    <p>In the ever-evolving landscape of cryptocurrencies, one project stands out as a game-changer in how we approach online payments. The <b>Solana Mystery Box Shop</b>, a mainly Django-based platform, has ushered in a new era in crypto transactions. Leveraging Django as the backbone, and strategically implementing Next.js for NFT minting, the shop overcomes Python limitations with JavaScript while enhancing its uniqueness. By harnessing the capabilities of the <a href="https://github.com/michaelhly/solana-py">Solana Python SDK</a> and others, such as the <a href="https://solana-labs.github.io/solana-web3.js/">Web3.js</a>.</p>
+    <p>In the ever-evolving landscape of cryptocurrencies, one project stands out as a game-changer in how we approach online payments. The <b>Solana Mystery Box Shop</b>, a mainly Django-based platform, has ushered in a new era in crypto transactions. Leveraging Django as the backbone, and strategically implementing Next.js for NFT minting, the shop overcomes Python limitations with JavaScript while enhancing its uniqueness. By harnessing the capabilities of the <a target="_blank" href="https://github.com/michaelhly/solana-py">Solana Python SDK</a> and others, such as the <a target="_blank" href="https://solana-labs.github.io/solana-web3.js/">Web3.js</a>.</p>
     <h4>The Vision and Mission:</h4>
     <p>At its core, the Solana Mystery Box Shop was conceived to simplify the crypto payment process. Its mission is to provide a seamless, secure, and instant shopping experience without the need for user registration, money deposits, or complex wallet connections. This approach also eliminates phishing risks by completely severing communication from the user's wallet to the webshop, with no data exchange from the user. In an era where crypto is becoming increasingly mainstream, the project's vision is to make it accessible to everyone.</p>
     <h4>Mystery Boxes:</h4>
@@ -53,8 +53,8 @@
     <p>I invite you to delve deeper into the <b>Solana Mystery Box Shop</b> by exploring it. Get a firsthand look at its innovative features and functionalities. Additionally, if you're interested in the inner workings of the project, you can access the source code on GitHub.</p>
     <br>
     {% comment %} Buttons for my web3shop and for the source code of the web3shop {% endcomment %}
-    <button id="blockButton1" class="myshop buttons" onclick='location.href="https://solanamysterybox.vercel.app/"'>MY SHOP</button>
-    <button id="blockButton2" class="sourcecode buttons" onclick='location.href="https://github.com/davidkakov111/SolanaMysteryBoxShop"'>SOURCE CODE</button>
+    <button id="blockButton1" class="myshop buttons" onclick='window.open("https://solanamysterybox.vercel.app/", "_blank")'>MY SHOP</button>
+    <button id="blockButton2" class="sourcecode buttons" onclick='window.open("https://github.com/davidkakov111/SolanaMysteryBoxShop", "_blank")'>SOURCE CODE</button>
     {% comment %} Image {% endcomment %}
     <div class="decor2">
         <img position="absolute" width="100%" height="100%" src="{%static 'decor.jpg'%}">

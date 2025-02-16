@@ -1,0 +1,97 @@
+{%extends 'base.html'%}
+{% comment %} Title {% endcomment %}
+{%block title%}ChainPortal{%endblock title%}
+{%block head%}
+{% comment %} Css file {% endcomment %}
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'chainportal.css' %}">
+{%endblock head%}
+{% block content %}
+
+<div id="island">
+    <div id="blockchain">
+        <img position="relative" width="100%" height="100%" src="{% static 'blockchain.png'%}">
+    </div>
+    <h1>ChainPortal</h1>
+
+    <p>
+        I developed <b>ChainPortal</b>, a cutting-edge multi-chain <b>NFT and token management platform</b> built with 
+        <b>Angular</b> (frontend), <b>Node.js with Nest.js</b> (backend), and a <b>PostgreSQL</b> database. This platform simplifies NFT and token 
+        minting across multiple blockchains, offering a <b>seamless and user-friendly experience</b> for both beginners and professionals.
+    </p>
+
+    <h4>Project Overview</h4>
+
+    <p>
+        <b>ChainPortal</b> provides a streamlined workflow for users to mint NFTs and tokens effortlessly. 
+        It currently supports <b>Solana</b>, with plans to integrate additional blockchains, as well as future functionality 
+        for bridging NFTs and tokens across networks.
+    </p>
+
+    <p>
+        The backend is fully <b>Dockerized</b>, with the database stored in a persistent <b>Docker volume</b> 
+        to ensure data integrity and scalability. Additionally, I have implemented a <b>CI/CD pipeline</b> that 
+        automatically deploys the project to my <b>VPS web server</b> whenever changes are pushed to a designated branch, 
+        ensuring efficient and continuous integration.
+    </p>
+
+    <p>
+        For a financial platform like this, trust and security are paramount. <b>ChainPortal</b> prioritizes security 
+        and transparency by providing real-time visibility into the minting process. Through <b>WebSocket-based</b> 
+        status updates with clear explanations, users stay informed about every step of the minting process running in the background.
+    </p>
+
+    <h4>User Experience & Features</h4>
+
+    {% comment %} Metaversum ilustration in the right side {% endcomment %}
+    <div id="metaversum"><img src="{%static 'metaversum.png'%}"></div>
+
+    <ul>
+        <li>
+            <b>Intuitive Minting Process</b>:
+            <ol>
+                <li><b>Select NFT or Token</b>: Users choose the type of asset.</li>
+                <li><b>Mint or Bridge</b>: Currently supports minting, with bridging functionality planned.</li>
+                <li>
+                    <b>Minting Steps</b>:
+                    <ul>
+                        <li>Provide NFT/token details.</li>
+                        <li>Select the blockchain for minting.</li>
+                        <li>Review, connect wallet, and confirm minting.</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <b>Real-Time Minting Feedback</b>:
+            <ul>
+                <li>Payment validation</li>
+                <li>Metadata upload to IPFS</li>
+                <li>Minting confirmation</li>
+            </ul>
+        </li>
+        <li><b>Transaction History</b>: Users can view past transactions for transparency and record-keeping.</li>
+        <li><b>Decentralized User Authentication</b>: Users register and manage their profiles via wallet connections, eliminating traditional passwords.</li>
+    </ul>
+
+    <h4>Technical Implementation & Monetization Strategy</h4>
+
+    <p>
+        ChainPortal is designed as a highly scalable platform that streamlines cross-chain asset creation while offering a frictionless user experience. 
+        The platform is fully automated, generating <b>passive income</b> through <b>minting fees</b> without requiring manual intervention. 
+        With the ability to process a high volume of transactions efficiently, ChainPortal has the potential to generate <b>millions in profit</b> as adoption grows.
+    </p>
+
+    <p>
+        This project highlights my expertise in <b>full-stack development, real-time systems, DevOps, web3 and more</b>. 
+        From architecting a <b>Dockerized backend</b> and implementing a <b>CI/CD pipeline</b> for automated deployment to optimizing blockchain interactions, 
+        ChainPortal demonstrates my ability to develop <b>scalable, high-impact applications</b> that drive innovation in the Web3 space.
+    </p>
+
+    <div class="buttons-container">
+        <button class="buttons" onclick='window.open("https://chainportal.vercel.app/", "_blank")'>ChainPortal</button>
+        <button class="buttons" onclick='window.open("https://chainportal.vercel.app/learn/", "_blank")'>Learn More</button>
+    </div>
+</div>
+
+{% endblock content %}

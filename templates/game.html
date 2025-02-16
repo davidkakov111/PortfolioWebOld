@@ -70,7 +70,7 @@
     <br>
     <h4>Risk Assessment:</h4>
     {% comment %} Text. {% endcomment %}
-    <p>I understand the importance of ensuring a safe gaming experience. While the game's .exe extension may trigger caution from some antivirus engines, rest assured, I've meticulously vetted Animal Invasion using VirusTotal. Over 85% of antivirus engines deemed it safe, with the remaining flagging it due to the file extension's inherent risk perception. For transparency, you can review the detailed scan <a href="https://www.virustotal.com/gui/file/3410b0575dbd261af7180c6aae27fb2e4765a5110a3fa57aa90358cb5a4f74aa">results</a> and access the game's open-source code for added peace of mind.</p>
+    <p>I understand the importance of ensuring a safe gaming experience. While the game's .exe extension may trigger caution from some antivirus engines, rest assured, I've meticulously vetted Animal Invasion using VirusTotal. Over 85% of antivirus engines deemed it safe, with the remaining flagging it due to the file extension's inherent risk perception. For transparency, you can review the detailed scan <a target="_blank" href="https://www.virustotal.com/gui/file/3410b0575dbd261af7180c6aae27fb2e4765a5110a3fa57aa90358cb5a4f74aa">results</a> and access the game's open-source code for added peace of mind.</p>
     <h4>Guide to <b>launch</b> the Game:</h4>
     <ol>
         {% comment %} Dropdown content. {% endcomment %}
@@ -93,7 +93,7 @@
         {%else%}
             <button class="buttons" onclick='location.href="{%url "login"%}"'>DOWNLOAD</button>
         {% endif %}
-        <button class="buttons" onclick='location.href="https://github.com/davidkakov111/My_Game.git"'>SOURCE CODE</button>
+        <button class="buttons" onclick='window.open("https://github.com/davidkakov111/My_Game.git", "_blank")'>SOURCE CODE</button>
     </div>
     {% comment %} Main character and solider images {% endcomment %}
     <div id="maincharacter">

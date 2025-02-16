@@ -19,6 +19,10 @@ def aboutme(request):
 def web3shop(request):
     return render(request, 'web3shop.html')
 
+#ChainPortal view
+def chainportal(request):
+    return render(request, 'chainportal.html')
+
 #Movie Catalog view
 def MovieCatalog(request):
     return render(request, 'moviecatalog.html')

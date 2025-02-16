@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.aboutme, name="aboutme"),
     path('game/', views.game, name='game'),
+    path('chainportal/', views.chainportal, name="chainportal"),
     path('Web3shop/', views.web3shop, name="web3shop"),
     path('MovieCatalog/', views.MovieCatalog, name="moviecatalog"),
     path('signup/', views.signup, name="signup"),
