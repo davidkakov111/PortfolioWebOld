@@ -34,12 +34,12 @@
     height: auto;
     display: block;
 }
-.buttons-container {
+#island .buttons-container {
     display: flex;
     justify-content: center;
     gap: 3%;
 }
-.buttons {
+#island .buttons {
     position: relative;
     height: 60px;
     width: 170px;
@@ -51,30 +51,30 @@
     font-size: larger;
     transition: transform 0.3s ease;
 }
-.buttons:hover {
+#island .buttons:hover {
     background-color: rgb(32, 85, 172);
     transform: translateY(-10%);
 }
-h1 {
+#island h1 {
     text-align: center;
     margin-top: 2%;
     margin-bottom: 4%;
     cursor: default;
     color: white;
 }
-h4 {
+#island h4 {
     cursor: default;
     color: white;
 }
-p {
+#island p {
     font-size: larger;
     cursor: default;
     color: white;
 }
-ul ul, ul ol, ol ul, ol ol {
+#island ul ul, ul ol, ol ul, ol ol {
     font-size: medium;
 }
-li {
+#island li {
     font-size: larger;
     cursor: default;
     color: white;
