@@ -90,7 +90,7 @@ p {
     color: white;
     font-size: larger;
     transition: transform 0.3s ease;
-}
+} 
 .buttons:hover {
     background-color: rgb(88, 80, 71);
     transform: translateY(-10%);
