@@ -16,8 +16,11 @@
     min-width: 100%;
     min-height: 100%;
 }
+a {
+    color: rgb(0, 47, 255);
+}
 a:visited {
-    color: rgb(10, 10, 197);
+    color: rgb(0, 0, 65);
 }
 .nai:hover {
     background-color: rgba(0, 138, 180, 0.877);

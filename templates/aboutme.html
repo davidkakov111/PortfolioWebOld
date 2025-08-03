@@ -8,28 +8,34 @@
 {%endblock head%}
 {%block content%}
 <div class="island">
-    <h1>Who I Am?</h1>
+    <h1>What I Bring to Your Project</h1>
+    
     {% comment %} Selfie. {% endcomment %}
     <div class="img_me">
         <img position="relative" width="100%" height"100%" src="{% static 'me.png'%}" alt="Me">
     </div>
+
     {% comment %} Informations about me {% endcomment %}
-    <h4>👋 About me</h4>
-    <p>I'm David Kovacs, experienced Full-Stack Developer with expertise in JavaScript, TypeScript, Node.js, Angular, React, MySQL, PostgreSQL and more. Over the years, I’ve delivered reliable, scalable, and high-performance applications, including eCommerce, Web3, and community-driven platforms, meeting the demands of thousands of users.</p>
-    <h4>🚀 Key Experiences & Projects</h4>
+    <h4>👋 About Me</h4>
+    <p>I'm David Kovacs — a Full-Stack Developer focused on the TypeScript ecosystem: React, Node.js, Next.js and Angular. I build fast, scalable, and maintainable applications that reduce manual work, boost efficiency, and directly support your business goals.</p>
+    
+    <h4>📌 Proven Experience with Real Impact</h4>
     <ul>
-        <li><p><b>Full-Stack Developer</b> (May 2024 - Present): For a Romanian software development company, worked on multiple high-traffic eCommerce platforms, automating key processes; contributed to the development of a CMS platform that enables users to build custom webshops; and developed a Székely localization search engine, optimizing database management and search features for a local community, among other projects.</p></li>
+        <li><p><b>Full-Stack Developer</b> (April 2025 - Present): At Skyint Ltd., a software company serving the European Space Agency and commercial clients, I designed and developed a web platform for automating environmental lab workflows. This included building advanced CRUD tools, DOCX report generation, custom Excel importers, and real-time pollution dashboards. Cut reporting and data entry time by 50%, helping the client save hours of weekly manual work and reducing human error.</p></li>
+        <li><p><b>Full-Stack Developer</b> (May 2024 - Present): For a Romanian software development company, worked on multiple high-traffic eCommerce platforms. Reduced human intervention in the order placement process by 100% through process automation, improving speed and reliability. Contributed to the development of a CMS platform that enables users to build custom webshops, and built a Székely-localized search engine to optimize search relevance and database performance for local communities.</p></li>
         <li><p><b>Freelance Backend Developer</b> (June 2024 - September 2024): For Nexon company's <a target="_blank" href='https://play.google.com/store/apps/details?id=ro.nexon.nexoncommunity&hl=en'>Nexonity</a> app, I developed a scalable backend server using Node.js with NestJS, creating robust APIs and integrating location-based features and push notifications to enhance user engagement for thousands of users. Additionally, I set up CI/CD pipelines with Docker to ensure seamless deployment and system stability, along with other key functionalities.</p></li>
-        <li><p><b>Personal Projects</b> (December 2022 - Present): Worked on projects like ChainPortal, a platform for minting and bridging Web3 assets across blockchains and Solana Mystery Box Shop, an automated webshop generating passive income by selling randomized Web3 assets. I also built a Movie Catalog App using React and Next.js for browsing, rating, and saving movies, with an admin panel for content management, among other projects.</p></li>
+        <li><p><b>Personal Projects</b> (December 2022 - Present): Worked on projects like ChainPortal, a platform for minting and bridging Web3 assets across blockchains and Solana Mystery Box Shop, an automated webshop generating passive income by selling randomized Web3 assets. I also built a Movie Catalog App using React and Next.js for browsing, rating, and saving movies, with an admin panel for content management, among other projects.</p></li>    
     </ul>
-    <h4>💡 Why Choose Me?</h4>
-    <p>I deliver scalable, efficient, and secure solutions that save clients time and money. My expertise includes custom web applications, eCommerce solutions, Web3 applications and more, with a primary focus on driving real business outcomes.</p>
-    <p style="text-indent: 60px;"><b>Proven Client Impact</b>: I've built solutions that automate processes, like enable users to place orders seamlessly, saving clients both time and money.</p>
-    <p style="text-indent: 60px;"><b>Results-Oriented</b>: I prioritize performance, security and efficiency, delivering solutions that drive business growth.</p>
-    <p style="text-indent: 60px;"><b>Real-World Results</b>: My work has consistently helped clients streamline operations and increase productivity, driving measurable improvements in their business.</p>
-    <h4>🔍 Let's Connect</h4>
-    <p>Don't hesitate to <a href="{%url 'contact'%}">reach out</a>! Whether you're seeking a developer to bring your vision to life or need someone to step in and optimize your existing setup, feel free to reach out.</p>
-    <br>
+
+    <h4>💡 What You Get</h4>
+    <p>Need a developer who delivers fast, scalable, and secure solutions? I focus on solving real business problems — whether it’s automating time-consuming tasks, building user-friendly platforms, or optimizing performance to handle growth.</p>
+    <p style="text-indent: 60px;"><b>Save Time & Resources:</b> I build tools that eliminate manual work, reduce operational costs, and improve workflow efficiency.</p>
+    <p style="text-indent: 60px;"><b>Drive Results:</b> From seamless eCommerce to smart dashboards and Web3 apps — every solution is built to deliver measurable value.</p>
+    <p style="text-indent: 60px;"><b>Stay Scalable & Secure:</b> Clean architecture and modern tech stacks ensure your product is easy to maintain, scale, and trust.</p>
+    
+    <h4>🔍 Let’s Work Together</h4>
+    <p>Have an idea or an existing system that needs improvement? <a href="{% url 'contact' %}">Get in touch</a> — I’m ready to help you build something that works and lasts.</p>
+   <br>
     {% comment %} My GitHub profile. {% endcomment %}
     <div class="contain">
         <div>
