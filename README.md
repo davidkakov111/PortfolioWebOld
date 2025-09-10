@@ -1,4 +1,4 @@
-[Portfolio Website](davidkovacs.vercel.app)🌟
+Portfolio Website 🌟
 --------------------------------------------------------------------------
 
 # Introduction:
